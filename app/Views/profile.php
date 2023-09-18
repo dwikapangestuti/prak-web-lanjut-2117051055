@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <?php echo '<link rel="stylesheet" href="./style.css">';?>
+  
+    <link rel="stylesheet" href="<?=base_url("/assets/css/style.css")?>">
+
 </head>
 <body>
     <div class="container">
         <div class="card" data-tilt>
-            <img src="<?=base_url('./images/kaa.jpg')?>">
+
+            <img src="<?=base_url("/assets/img/kaa.jpg")?>"alt="" width="200px">
             <h2>Profile</h2>
             <br>
             <tr>
-                <td>Dwika Pangestuti</td>
+                <td><?=$nama?></td>
             </tr>
             <br>
             <tr>
-                <td>AB</td>
+                <td><?=$kelas?></td>
             </tr>
             <br>
             <tr>
-                <td>2117051055</td>
+                <td><?=$npm?></td>
             </tr>
             <div class="link">
-                <a href="https://instagram.com"><img src="<?=base_url('./images/instagram.png')?>"></a>
-                <a href="https://twitter.com"><img src="<?=base_url('./images/twitter.png')?>"></a>
-                <a href="https://tiktok.com"><img src="<?=base_url('./images/tiktok.png')?>"></a>
+                <a href="https://instagram.com"><img src="/assets/img/instagram.png"></a>
+                <a href="https://twitter.com"><img src="/assets/img/twitter.png"></a>
+                <a href="https://tiktok.com"><img src="/assets/img/tiktok.png"></a>
             </div>
         </div>
     </div>
