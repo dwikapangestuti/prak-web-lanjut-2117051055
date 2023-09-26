@@ -20,7 +20,7 @@
             </tr>
             <br>
             <tr>
-                <td><?=$kelas?></td>
+                <td><?=$id_kelas?></td>
             </tr>
             <br>
             <tr>
