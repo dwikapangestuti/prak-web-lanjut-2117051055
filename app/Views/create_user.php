@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?=base_url("assets/css/style.css")?>">
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'>
-</head>
-<body>
-    <div class="container"> 
+<?= $this->extend('layout/app') ?>
+
+<?= $this->section('content') ?>
+   <div class="container"> 
         <form action="<?= base_url('/user/store')?>" method="post">
             <h3>Form Biodata</h3>
             <form action="<?= base_url('/user/store') ?>" method="POST">
@@ -43,5 +36,5 @@
             </fieldset>
         </form>
     </div>
-</body>
-</html>
+    
+<?= $this->endsection() ?>
