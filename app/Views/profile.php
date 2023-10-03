@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  
-    <link rel="stylesheet" href="<?=base_url("/assets/css/style.css")?>">
+<?= $this->extend('layout/app') ?>
 
-</head>
-<body>
+<?= $this->section('content') ?>
     <div class="container">
         <div class="card" data-tilt>
 
@@ -33,5 +25,5 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+<?= $this->endsection() ?>
