@@ -1,29 +1,15 @@
 <?= $this->extend('layout/app') ?>
 
 <?= $this->section('content') ?>
-    <div class="container">
-        <div class="card" data-tilt>
-
-            <img src="<?=base_url("/assets/img/kaa.jpg")?>"alt="" width="200px">
-            <h2>Profile</h2>
-            <br>
-            <tr>
-                <td><?=$nama?></td>
-            </tr>
-            <br>
-            <tr>
-                <td><?=$id_kelas?></td>
-            </tr>
-            <br>
-            <tr>
-                <td><?=$npm?></td>
-            </tr>
-            <div class="link">
-                <a href="https://instagram.com"><img src="/assets/img/instagram.png"></a>
-                <a href="https://twitter.com"><img src="/assets/img/twitter.png"></a>
-                <a href="https://tiktok.com"><img src="/assets/img/tiktok.png"></a>
+<!-- <div class="container"> -->
+            <div class="w-100 d-grid border gap-2" style="height: 100vh; place-content: center;">
+                <div class="w-50 text-center border mx-auto">
+                <img src="<?= $user['foto'] ?? '<default-foto>' ?>" class="img-fluid my-5" style="width: 150px; border-radius: 200px;"/>  
             </div>
-        </div>
-    </div>
+                <center><div class="..."><?= $user['nama'] ?></div>
+                <center><div class="..."><?= $user['npm'] ?></div>
+                <center><div class="..."><?= $user['nama_kelas'] ?></div>
+            </div>
+        <!-- </div> -->
 
 <?= $this->endsection() ?>

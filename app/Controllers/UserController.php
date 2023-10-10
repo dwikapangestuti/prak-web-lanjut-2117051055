@@ -37,26 +37,7 @@ class UserController extends BaseController{
 
         $kelasModel = new KelasModel();
         $kelas = $this->kelasModel->getKelas();
-       
 
-        // $kelas = [
-        //     [
-        //         'id' => 1,
-        //         'nama_kelas' => 'A'
-        //     ],
-        //     [
-        //         'id' => 2,
-        //         'nama_kelas' => 'B'  
-        //     ],
-        //     [
-        //         'id' => 3,
-        //         'nama_kelas' => 'C'
-        //     ],
-        //     [
-        //         'id' => 4,
-        //         'nama_kelas' => 'D'
-        //     ],
-        // ];
 
         if (session('validation') != null) {
             $validation = session('validation');
@@ -74,10 +55,18 @@ class UserController extends BaseController{
     }
 
     public function store(){
-        //dd($this->request->getVar());
-        // $userModel = new UserModel();
-        // $userModel = new KelasModel();
+    
         
+        $path = 'assets/uploads/img/' ;
+
+        $foto = $this->request->getFile('foto');
+        
+        $name = $foto->getRandomName();
+        
+
+        if($foto->move($path, $name)){
+            $foto = base_url($path . $name);
+        }
 
         if(!$this->validate([
              'nama' => 'required',
@@ -105,29 +94,22 @@ class UserController extends BaseController{
             'nama' => $this->request->getVar('nama'),
             'npm' => $this->request->getVar('npm'),
             'id_kelas' =>$this->request->getVar('kelas'),
+            'foto'  => $foto
         ]);
-
-        // $this->userModel->saveUser($data);
-        // $data_new=[
-        //     'title'=> 'iniform',
-        //     'nama' => $nama,
-        //     'npm' => $npm,
-        //     'id_kelas' => $kelasModel->find($kelas)['nama_kelas']
-        // ];
 
         return redirect()->to('/user/index');
 
-        // $userModel->saveUser([
-        //     'nama' => $this->request->getVar('nama'),
-        //     'id_kelas' => $this->request->getVar('kelas'),
-        //     'npm' => $this->request->getVar('npm'),
-        // ]);
+        
 
-        // $data = [
-        //     'nama' => $this->request->getVar('nama'),
-        //     'kelas' => $this->request->getVar('kelas'),
-        //     'npm' => $this->request->getVar('npm'),
-        // ];
-        // return view('profile', $data);
+    }
+    public function show($id){
+        $user = $this->userModel->getUser($id);
+
+        $data = [
+            'title' => 'Profile',
+            'user' => $user,
+        ];
+
+        return view('profile', $data);
     }
 }

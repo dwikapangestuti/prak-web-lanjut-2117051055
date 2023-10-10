@@ -3,6 +3,9 @@
 <?= $this->section('content') ?>
     <body>
     <table class="table">
+    <form action="<?= base_url('user/create') ?>" method="POST">
+                    <button class="btn btn-warning">Tambah Data</button>
+    </form>
         <thead>
             <tr classs="table-primary">
                 <th>ID</th>
@@ -21,6 +24,9 @@
                     <td><?= $user['nama'] ?></td>
                     <td><?= $user['npm'] ?></td>
                     <td><?= $user['nama_kelas'] ?></td>
+                    <td>
+                        <a href="<?= base_url('user/' . $user['id']) ?>">Detail</a>
+                    </td>
                     <td><button type="button" class="btn btn-success">Edit</button>
                     <button type="button" class="btn btn-danger">Delete</button></td>
                 </tr>
