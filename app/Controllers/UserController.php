@@ -37,7 +37,7 @@ class UserController extends BaseController{
 
         $kelasModel = new KelasModel();
         $kelas = $this->kelasModel->getKelas();
-       
+
 
         if (session('validation') != null) {
             $validation = session('validation');
