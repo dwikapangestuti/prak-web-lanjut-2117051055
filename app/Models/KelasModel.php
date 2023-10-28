@@ -13,7 +13,7 @@ class KelasModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_kelas'];
+    protected $allowedFields    = ['nama_kelas','created_at','updated_at','deleted_at'];
 
     // Dates
     protected $useTimestamps = true;
@@ -38,4 +38,30 @@ class KelasModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    public function saveKelas($data){
+        $this->insert($data);
+    }
+
+    public function getKelas($id = null){
+        if($id != null){
+            return $this->select('kelas.*, kelas.nama_kelas')
+                ->find($id);
+        }
+        return $this->findAll();
+    }
+
+    public function updateKelas($data, $id){
+        return $this->update($id, $data);
+    }
+
+    public function deleteKelas($id){
+        return $this->delete($id);
+    }
+
+    public function getKelas(){
+        return $this->findAll();
+    }
+
 }
