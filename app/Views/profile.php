@@ -6,9 +6,15 @@
                 <div class="w-50 text-center border mx-auto">
                 <img src="<?= $user['foto'] ?? '<default-foto>' ?>" class="img-fluid my-5" style="width: 150px; border-radius: 200px;"/>  
             </div>
+
+                <center><div class=" "><?= $user['nama'] ?></div>
+                <center><div class=" "><?= $user['npm'] ?></div>
+                <center><div class=" "><?= $user['nama_kelas'] ?></div>
+
                 <center><div class="..."><?= $user['nama'] ?></div>
                 <center><div class="..."><?= $user['npm'] ?></div>
                 <center><div class="..."><?= $user['nama_kelas'] ?></div>
+
             </div>
         <!-- </div> -->
 

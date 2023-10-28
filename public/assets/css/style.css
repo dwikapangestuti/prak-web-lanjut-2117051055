@@ -72,17 +72,17 @@
     box-sizing: border-box;
     }
     
-    body {
+    /* body {
     font-family: 'Nunito', sans-serif;
     color: #eff1f3;
-    }
+
+  
     
     form {
         width: 70%;
         max-width: 40%;
         color: #e9e7e7;
         text-align: center;
-        padding: 50px 35px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         background: rgba(255, 255, 255, 0.2);
         border-radius: 16px;
