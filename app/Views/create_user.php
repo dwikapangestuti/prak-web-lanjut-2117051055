@@ -2,7 +2,11 @@
 
 <?= $this->section('content') ?>
    <div class="container"> 
+
         <form action="<?= base_url('/user/index')?>" method="post" enctype="multipart/form-data">
+=======
+        <form action="<?= base_url('/user/store')?>" method="post" enctype="multipart/form-data">
+
             <h3>Form Biodata</h3>
             <form action="<?= base_url('/user/index') ?>" method="POST">
                 <input type="text" name="nama" placeholder="Nama" class="form-control <?= ($validation->hasError('nama')) ?

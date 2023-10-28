@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
+
 <header>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -28,6 +29,9 @@
   </div>
 </nav>
     </header>
+
+<h1 align="center">List User</h1>
+
     <?= $this->renderSection('content') ?>
 </body>
 </html>

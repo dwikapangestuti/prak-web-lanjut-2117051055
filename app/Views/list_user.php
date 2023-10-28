@@ -2,11 +2,18 @@
 
 <?= $this->section('content') ?>
     <body>
+
     <br>
     <table class="table">
     <a href="<?= base_url('user/create') ?>" method="POST">
                     <button class="btn btn-warning">Tambah Data</button>
     <br>
+=======
+    <table class="table">
+    <form action="<?= base_url('user/create') ?>" method="POST">
+                    <button class="btn btn-warning">Tambah Data</button>
+    </form>
+
         <thead>
             <tr classs="table-primary">
                 <th>ID</th>

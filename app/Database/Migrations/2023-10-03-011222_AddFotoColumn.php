@@ -8,10 +8,18 @@ class AddFotoColumn extends Migration
 {
     public function up()
     {
+
         $this->forge->addColumn('user', ['foto' => [
             'type'          => 'VARCHAR',
             'constraint'    => 255,
             'null'          => true,
+
+        $this->forge->addColumn('user', [
+            'foto' => [
+                'type'          => 'VARCHAR',
+                'constraint'     => 255,
+                'null'          => true,
+
             ],
         ]);
     }
@@ -20,4 +28,8 @@ class AddFotoColumn extends Migration
     {
         $this->forge->dropColumn('user', ['foto']);
     }
+
 }
+
+}
+
